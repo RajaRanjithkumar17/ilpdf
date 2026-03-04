@@ -1,0 +1,52 @@
+{
+  "name": "pdf-tools-frontend",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "postinstall": "mkdir -p public && cp node_modules/pdfjs-dist/build/pdf.worker.min.mjs public/pdf.worker.min.mjs",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css,json,md}\" \"next.config.js\" \"tsconfig.json\" \"postcss.config.js\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,css,json,md}\" \"next.config.js\" \"tsconfig.json\" \"postcss.config.js\""
+  },
+  "dependencies": {
+    "@imgly/background-removal": "^1.7.0",
+    "@vladmandic/face-api": "^1.7.15",
+    "browser-image-compression": "^2.0.2",
+    "docx": "^9.5.3",
+    "heic2any": "^0.0.4",
+    "html-to-image": "^1.11.13",
+    "jspdf": "^4.2.0",
+    "jszip": "^3.10.1",
+    "next": "^15.1.0",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^4.9.155",
+    "pptxgenjs": "^3.12.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tesseract.js": "^7.0.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "postcss": "^8.5.0",
+    "prettier": "^3.2.5",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.0"
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false,
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "endOfLine": "lf"
+  }
+}

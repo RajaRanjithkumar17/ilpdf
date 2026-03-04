@@ -1,0 +1,56 @@
+/* Base icon styling */
+i[class^='icon-'] {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../public/sprite.svg'); /* or .png */
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Individual icon positioning */
+.icon-merge {
+  background-position: 0 0;
+}
+.icon-split {
+  background-position: -40px 0;
+}
+.icon-compress {
+  background-position: -80px 0;
+}
+.icon-jpg-to-pdf {
+  background-position: -120px 0;
+}
+.icon-pdf-to-jpg {
+  background-position: -160px 0;
+}
+.icon-pdf-to-word {
+  background-position: -200px 0;
+}
+.icon-pdf-to-excel {
+  background-position: -240px 0;
+}
+.icon-pdf-to-ppt {
+  background-position: -280px 0;
+}
+.icon-pdf-to-text {
+  background-position: -320px 0;
+}
+.icon-rotate {
+  background-position: -360px 0;
+}
+.icon-watermark {
+  background-position: -400px 0;
+}
+.icon-delete-pages {
+  background-position: -440px 0;
+}
+.icon-reorder {
+  background-position: -480px 0;
+}
+.icon-protect {
+  background-position: -520px 0;
+}
+.icon-unlock {
+  background-position: -560px 0;
+}
