@@ -176,115 +176,105 @@ export default function Header() {
 
           {/* Nav links */}
           <nav className="hidden md:flex items-center flex-1">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="px-6 py-2 text-[11px] font-bold uppercase tracking-wide text-gray-700 hover:text-red-500 whitespace-nowrap transition-colors"
-                >
-                  {link.name}
-                </Link>
-              ))}
-
-              {/* Convert dropdown */}
-              <div
-                className="relative"
-                onMouseEnter={openConvert}
-                onMouseLeave={scheduleCloseConvert}
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="px-6 py-2 text-[11px] font-bold uppercase tracking-wide text-gray-700 hover:text-red-500 whitespace-nowrap transition-colors"
               >
-                <button
-                  className={`px-6 py-2 text-[11px] font-bold uppercase tracking-wide flex items-center gap-1 whitespace-nowrap transition-colors ${convertOpen ? 'text-red-500' : 'text-gray-700 hover:text-red-500'}`}
-                >
-                  {convertLabel}
-                  <svg
-                    className={`w-3 h-3 transition-transform duration-200 ${convertOpen ? 'rotate-180' : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2.5}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
+                {link.name}
+              </Link>
+            ))}
 
-                {convertOpen && (
-                  <div className="absolute top-full left-0 mt-0 bg-white border border-gray-200 rounded-b-md shadow-lg py-1 min-w-50 z-50">
-                    {convertTools.map((tool) => {
-                      const icon = getToolIcon(tool.href);
-                      return (
-                        <Link
-                          key={tool.href}
-                          href={tool.href}
-                          className="flex items-center font-semibold gap-2.5 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
-                        >
-                          {icon && (
-                            <span
-                              className="w-5 h-5 shrink-0 [&>svg]:w-full [&>svg]:h-full"
-                              dangerouslySetInnerHTML={{ __html: icon }}
-                            />
-                          )}
-                          {tool.name}
-                        </Link>
-                      );
-                    })}
-                  </div>
-                )}
-              </div>
-
-              {/* All Tools dropdown */}
-              <div
-                onMouseEnter={openAllTools}
-                onMouseLeave={scheduleCloseAllTools}
+            {/* Convert dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={openConvert}
+              onMouseLeave={scheduleCloseConvert}
+            >
+              <button
+                className={`px-6 py-2 text-[11px] font-bold uppercase tracking-wide flex items-center gap-1 whitespace-nowrap transition-colors ${convertOpen ? 'text-red-500' : 'text-gray-700 hover:text-red-500'}`}
               >
-                <button
-                  className={`px-3 py-2 text-[11px] font-bold uppercase tracking-wide flex items-center gap-1 whitespace-nowrap transition-colors ${allToolsOpen ? 'text-red-500' : 'text-gray-700 hover:text-red-500'}`}
+                {convertLabel}
+                <svg
+                  className={`w-3 h-3 transition-transform duration-200 ${convertOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
                 >
-                  {allToolsLabel}
-                  <svg
-                    className={`w-3 h-3 transition-transform duration-200 ${allToolsOpen ? 'rotate-180' : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2.5}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </nav>
-
-            {/* Right side icons */}
-            <div className="flex items-center gap-1 ml-auto">
-              <button className="p-2 text-gray-400 hover:text-gray-700 transition-colors rounded-full hover:bg-gray-100">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <circle cx="5" cy="5" r="1.5" />
-                  <circle cx="12" cy="5" r="1.5" />
-                  <circle cx="19" cy="5" r="1.5" />
-                  <circle cx="5" cy="12" r="1.5" />
-                  <circle cx="12" cy="12" r="1.5" />
-                  <circle cx="19" cy="12" r="1.5" />
-                  <circle cx="5" cy="19" r="1.5" />
-                  <circle cx="12" cy="19" r="1.5" />
-                  <circle cx="19" cy="19" r="1.5" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2.5}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
 
-              <button className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 hover:bg-gray-300 transition-colors ml-1">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 12c2.67 0 4.8-2.13 4.8-4.8S14.67 2.4 12 2.4 7.2 4.53 7.2 7.2 9.33 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+              {convertOpen && (
+                <div className="absolute top-full left-0 mt-0 bg-white border border-gray-200 rounded-b-md shadow-lg py-1 min-w-50 z-50">
+                  {convertTools.map((tool) => {
+                    const icon = getToolIcon(tool.href);
+                    return (
+                      <Link
+                        key={tool.href}
+                        href={tool.href}
+                        className="flex items-center font-semibold gap-2.5 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
+                      >
+                        {icon && (
+                          <span
+                            className="w-5 h-5 shrink-0 [&>svg]:w-full [&>svg]:h-full"
+                            dangerouslySetInnerHTML={{ __html: icon }}
+                          />
+                        )}
+                        {tool.name}
+                      </Link>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+
+            {/* All Tools dropdown */}
+            <div
+              onMouseEnter={openAllTools}
+              onMouseLeave={scheduleCloseAllTools}
+            >
+              <button
+                className={`px-3 py-2 text-[11px] font-bold uppercase tracking-wide flex items-center gap-1 whitespace-nowrap transition-colors ${allToolsOpen ? 'text-red-500' : 'text-gray-700 hover:text-red-500'}`}
+              >
+                {allToolsLabel}
+                <svg
+                  className={`w-3 h-3 transition-transform duration-200 ${allToolsOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2.5}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
             </div>
+          </nav>
+
+          {/* Right side icons */}
+          <div className="flex items-center gap-1 ml-auto">
+            <Link href="/image" className="flex items-center shrink-0 mr-2">
+              <Image
+                src="/img-logo.png"
+                alt="IL PDF"
+                width={180}
+                height={33}
+                priority
+              />
+            </Link>
           </div>
         </div>
+      </div>
 
       {/* All Tools mega menu */}
       {allToolsOpen && (
@@ -292,41 +282,43 @@ export default function Header() {
           className="absolute top-14 left-0 right-0 bg-white border-b border-gray-200 shadow-xl z-40"
           onMouseEnter={() => clearTimeout(allToolsTimer.current)}
           onMouseLeave={scheduleCloseAllTools}
-          >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 py-7">
-              <div className={`grid gap-x-6 gap-y-6 ${isImageSection ? 'grid-cols-2 sm:grid-cols-3' : 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-6'}`}>
-                {categories.map((cat) => (
-                  <div key={cat.title}>
-                    <h3 className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3">
-                      {cat.title}
-                    </h3>
-                    <ul className="space-y-2">
-                      {cat.tools.map((tool) => {
-                        const icon = getToolIcon(tool.href);
-                        return (
-                          <li key={tool.href}>
-                            <Link
-                              href={tool.href}
-                              className="flex font-medium items-center gap-4 mr-2 py-2 text-sm text-gray-700 hover:text-red-500 transition-colors"
-                            >
-                              {icon && (
-                                <span
-                                  className="w-5 h-5 shrink-0 [&>svg]:w-full [&>svg]:h-full"
-                                  dangerouslySetInnerHTML={{ __html: icon }}
-                                />
-                              )}
-                              {tool.name}
-                            </Link>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </div>
-                ))}
-              </div>
+        >
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-7">
+            <div
+              className={`grid gap-x-6 gap-y-6 ${isImageSection ? 'grid-cols-2 sm:grid-cols-3' : 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-6'}`}
+            >
+              {categories.map((cat) => (
+                <div key={cat.title}>
+                  <h3 className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3">
+                    {cat.title}
+                  </h3>
+                  <ul className="space-y-2">
+                    {cat.tools.map((tool) => {
+                      const icon = getToolIcon(tool.href);
+                      return (
+                        <li key={tool.href}>
+                          <Link
+                            href={tool.href}
+                            className="flex font-medium items-center gap-4 mr-2 py-2 text-sm text-gray-700 hover:text-red-500 transition-colors"
+                          >
+                            {icon && (
+                              <span
+                                className="w-5 h-5 shrink-0 [&>svg]:w-full [&>svg]:h-full"
+                                dangerouslySetInnerHTML={{ __html: icon }}
+                              />
+                            )}
+                            {tool.name}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
-        )}
-      </header>
+        </div>
+      )}
+    </header>
   );
 }
