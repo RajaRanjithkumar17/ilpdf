@@ -264,13 +264,11 @@ export default function Header() {
           {/* Right side icons */}
           <div className="flex items-center gap-1 ml-auto">
             <Link href="/image" className="flex items-center shrink-0 mr-2">
-              <Image
-                src="/img-logo.png"
-                alt="IL PDF"
-                width={180}
-                height={33}
-                priority
-              />
+              <p className="text-[26px] max-md:text-[16px] text-[#ec73b2] font-bold  uppercase ">
+                <i>
+                  <b>IMAGE TOOLS</b>
+                </i>
+              </p>
             </Link>
           </div>
         </div>
