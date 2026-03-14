@@ -4,8 +4,8 @@ import { imageTools } from '@/lib/imageTools';
 
 const DOMAIN = 'https://www.ilovepdfpink.com';
 
-// Update this date when site content actually changes
-const LAST_UPDATED = new Date('2026-03-09');
+// Use current build date so sitemap stays fresh on each deploy
+const LAST_UPDATED = new Date();
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pdfPages = tools.map((tool) => ({

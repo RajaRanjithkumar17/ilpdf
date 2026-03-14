@@ -10,14 +10,22 @@ export type ProcessorFn = (
   onProgress?: (percent: number) => void
 ) => Promise<Blob>;
 
+interface SeoContentProps {
+  howToSteps?: { name: string; text: string }[];
+  faqItems?: { question: string; answer: string }[];
+  relatedTools?: { name: string; href: string; color: string; description: string }[];
+}
+
 type Stage = 'upload' | 'processing' | 'done' | 'error';
 
 export default function ToolPage({
   tool,
   process,
+  seoContent,
 }: {
   tool: Tool;
   process: ProcessorFn;
+  seoContent?: SeoContentProps;
 }) {
   const [stage, setStage] = useState<Stage>('upload');
   const [files, setFiles] = useState<File[]>([]);
@@ -359,9 +367,9 @@ export default function ToolPage({
             {/* ── Right sidebar ── */}
             <div className="w-full lg:w-80 shrink-0 lg:border-l lg:border-gray-300 lg:pl-8 lg:ml-8 mt-8 lg:mt-0">
               <div className="lg:sticky lg:top-24 space-y-5 lg:pr-4">
-                <h2 className="text-2xl font-bold text-gray-900">
+                <div className="text-2xl font-bold text-gray-900">
                   {tool.name}
-                </h2>
+                </div>
 
                 {/* Help box */}
                 <div className="bg-blue-50 border border-blue-100 rounded-lg p-4">
@@ -611,6 +619,132 @@ export default function ToolPage({
                 Try again
               </button>
             </div>
+          )}
+        </div>
+      )}
+
+      {/* ───────── SEO Content Sections ───────── */}
+      {seoContent && (
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+          {/* How It Works */}
+          {seoContent.howToSteps && seoContent.howToSteps.length > 0 && (
+            <section>
+              <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+                How to {tool.name}
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {seoContent.howToSteps.map((step, i) => (
+                  <div key={i} className="text-center">
+                    <div
+                      className="w-10 h-10 rounded-full text-white font-bold text-lg flex items-center justify-center mx-auto mb-3"
+                      style={{ backgroundColor: tool.color }}
+                    >
+                      {i + 1}
+                    </div>
+                    <h3 className="font-semibold text-gray-900 mb-1">{step.name}</h3>
+                    <p className="text-sm text-gray-500">{step.text}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Features / Why Use This Tool */}
+          <section>
+            <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+              Why Use Our {tool.name} Tool
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="text-center p-4">
+                <div className="text-3xl mb-3">🔒</div>
+                <h3 className="font-semibold text-gray-900 mb-1">100% Private</h3>
+                <p className="text-sm text-gray-500">
+                  Your files never leave your device. All processing happens locally in your browser.
+                </p>
+              </div>
+              <div className="text-center p-4">
+                <div className="text-3xl mb-3">⚡</div>
+                <h3 className="font-semibold text-gray-900 mb-1">Lightning Fast</h3>
+                <p className="text-sm text-gray-500">
+                  No waiting for server uploads. Processing starts instantly on your device.
+                </p>
+              </div>
+              <div className="text-center p-4">
+                <div className="text-3xl mb-3">💰</div>
+                <h3 className="font-semibold text-gray-900 mb-1">100% Free</h3>
+                <p className="text-sm text-gray-500">
+                  No sign-up, no hidden fees, no watermarks. Free forever with no file limits.
+                </p>
+              </div>
+              <div className="text-center p-4">
+                <div className="text-3xl mb-3">📱</div>
+                <h3 className="font-semibold text-gray-900 mb-1">Works Everywhere</h3>
+                <p className="text-sm text-gray-500">
+                  Use on any device — desktop, tablet, or phone. No software installation needed.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* FAQ Section */}
+          {seoContent.faqItems && seoContent.faqItems.length > 0 && (
+            <section>
+              <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+                Frequently Asked Questions
+              </h2>
+              <div className="space-y-4 max-w-3xl mx-auto">
+                {seoContent.faqItems.map((faq, i) => (
+                  <details
+                    key={i}
+                    className="group bg-white border border-gray-200 rounded-lg"
+                  >
+                    <summary className="flex items-center justify-between cursor-pointer px-6 py-4 font-medium text-gray-900 hover:bg-gray-50 rounded-lg">
+                      {faq.question}
+                      <svg
+                        className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-4"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </summary>
+                    <div className="px-6 pb-4 text-sm text-gray-600 leading-relaxed">
+                      {faq.answer}
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Related Tools */}
+          {seoContent.relatedTools && seoContent.relatedTools.length > 0 && (
+            <section>
+              <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+                Related PDF Tools
+              </h2>
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                {seoContent.relatedTools.map((rt) => (
+                  <a
+                    key={rt.href}
+                    href={rt.href}
+                    className="block p-4 bg-white border border-gray-200 rounded-lg hover:shadow-md hover:border-gray-300 transition-all text-center"
+                  >
+                    <h3
+                      className="font-semibold text-sm mb-1"
+                      style={{ color: rt.color }}
+                    >
+                      {rt.name}
+                    </h3>
+                    <p className="text-xs text-gray-500 line-clamp-2">
+                      {rt.description}
+                    </p>
+                  </a>
+                ))}
+              </div>
+            </section>
           )}
         </div>
       )}
