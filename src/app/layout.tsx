@@ -6,27 +6,32 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.ilovepdfpink.com'),
   title: {
-    default: 'iLovePDF Pink — Free Online PDF & Image Tools | Merge, Split, Compress, Convert',
+    default:
+      'iLovePDF Pink — Free Online PDF & Image Tools | Merge, Split, Compress, Convert',
     template: '%s | iLovePDF Pink',
   },
   description:
     'Free, private, local PDF & image tools. Merge, split, compress, convert PDFs. Compress, resize, crop, convert images — all processed locally in your browser. No uploads, no cloud, no sign-up.',
   keywords:
-    'PDF tools, merge PDF, split PDF, compress PDF, PDF to Word, PDF to JPG, convert PDF, image tools, compress image, image compressor, photo compressor, webp to jpg, heic to jpg, resize image, crop image, free PDF tools, free image tools, online PDF editor, online image editor, ilovepdf',
+    'PDF tools, merge PDF, split PDF, compress PDF, PDF to Word, PDF to JPG, convert PDF, image tools, compress image, image compressor, photo compressor, webp to jpg, heic to jpg, resize image, crop image, free PDF tools, free image tools, online PDF editor, online image editor, ilovepdf, pdf smart, pdfsmart',
   alternates: {
     canonical: 'https://www.ilovepdfpink.com',
+    languages: {
+      'en-US': 'https://www.ilovepdfpink.com',
+    },
   },
   openGraph: {
-    title: 'iLovePDF Pink — Free Online PDF Tools',
+    title: 'iLovePDF Pink — Free Online PDF & Image Tools',
     description:
       'Merge, split, compress, convert, and edit PDFs for free. 100% private — all processing happens locally in your browser.',
     type: 'website',
     url: 'https://www.ilovepdfpink.com',
     siteName: 'iLovePDF Pink',
+    locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'iLovePDF Pink — Free Online PDF Tools',
+    title: 'iLovePDF Pink — Free Online PDF & Image Tools',
     description:
       'Merge, split, compress, convert, and edit PDFs for free. 100% private — runs locally in your browser.',
   },
@@ -54,7 +59,14 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-touch-icon.png',
   },
+  manifest: '/manifest.json',
+  other: {
+    'theme-color': '#e74c3c',
+    'apple-mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-status-bar-style': 'default',
+  },
   publisher: 'iLovePDF Pink',
+  category: 'Productivity',
 };
 
 const footerTools = [
@@ -96,24 +108,45 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'Organization',
-              name: 'iLovePDF Pink',
-              url: 'https://www.ilovepdfpink.com',
-              description:
-                'Free, privacy-first PDF and image tools. All processing happens locally in your browser.',
-            }),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'WebSite',
-              name: 'iLovePDF Pink',
-              url: 'https://www.ilovepdfpink.com',
-              description:
-                'Free online PDF and image tools. Merge, split, compress, convert PDFs. Compress, resize, crop images. 100% private.',
+              '@graph': [
+                {
+                  '@type': 'Organization',
+                  '@id': 'https://www.ilovepdfpink.com/#organization',
+                  name: 'iLovePDF Pink',
+                  url: 'https://www.ilovepdfpink.com',
+                  description:
+                    'Free, privacy-first PDF and image tools. All processing happens locally in your browser.',
+                  logo: {
+                    '@type': 'ImageObject',
+                    url: 'https://www.ilovepdfpink.com/icon-512.png',
+                    width: 512,
+                    height: 512,
+                  },
+                  foundingDate: '2025',
+                  sameAs: [],
+                },
+                {
+                  '@type': 'WebSite',
+                  '@id': 'https://www.ilovepdfpink.com/#website',
+                  name: 'iLovePDF Pink',
+                  url: 'https://www.ilovepdfpink.com',
+                  description:
+                    'Free online PDF and image tools. Merge, split, compress, convert PDFs. Compress, resize, crop images. 100% private.',
+                  publisher: {
+                    '@id': 'https://www.ilovepdfpink.com/#organization',
+                  },
+                  inLanguage: 'en-US',
+                  potentialAction: {
+                    '@type': 'SearchAction',
+                    target: {
+                      '@type': 'EntryPoint',
+                      urlTemplate:
+                        'https://www.ilovepdfpink.com/?q={search_term_string}',
+                    },
+                    'query-input': 'required name=search_term_string',
+                  },
+                },
+              ],
             }),
           }}
         />

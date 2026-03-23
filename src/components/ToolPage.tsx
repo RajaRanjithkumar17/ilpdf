@@ -254,6 +254,31 @@ export default function ToolPage({
           onDragLeave={() => setDragOver(false)}
           onDrop={handleDrop}
         >
+          {/* Breadcrumb Navigation */}
+          <nav aria-label="Breadcrumb" className="mb-6">
+            <ol className="flex items-center justify-center gap-1.5 text-sm text-gray-500">
+              <li>
+                <a href="/" className="hover:text-gray-900 transition-colors">Home</a>
+              </li>
+              <li aria-hidden="true">
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li>
+                <a href="/" className="hover:text-gray-900 transition-colors">PDF Tools</a>
+              </li>
+              <li aria-hidden="true">
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li>
+                <span className="font-medium text-gray-900">{tool.name}</span>
+              </li>
+            </ol>
+          </nav>
+
           {/* Header */}
           <div className="text-center mb-8">
             <div

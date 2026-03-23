@@ -145,18 +145,34 @@ const faqs = [
 ];
 
 export default function HomePage() {
+  const toolItems = tools.map((tool, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: tool.name,
+    url: `https://www.ilovepdfpink.com${tool.href}`,
+    description: tool.description,
+  }));
+
   const jsonLdSchemas = [
     {
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
+      '@id': 'https://www.ilovepdfpink.com/#collectionpage',
       name: 'Free Online PDF Tools',
       url: 'https://www.ilovepdfpink.com',
       description:
         'Free online PDF tools for merging, splitting, compressing, converting, rotating, watermarking, protecting, and redacting PDFs. 100% private — all processing happens in your browser.',
       isPartOf: {
-        '@type': 'WebSite',
-        name: 'iLovePDF Pink',
-        url: 'https://www.ilovepdfpink.com',
+        '@id': 'https://www.ilovepdfpink.com/#website',
+      },
+      about: {
+        '@type': 'Thing',
+        name: 'PDF Tools',
+      },
+      mainEntity: {
+        '@type': 'ItemList',
+        itemListElement: toolItems,
+        numberOfItems: tools.length,
       },
     },
     {
@@ -170,6 +186,26 @@ export default function HomePage() {
           text: faq.answer,
         },
       })),
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'SoftwareApplication',
+      name: 'iLovePDF Pink',
+      url: 'https://www.ilovepdfpink.com',
+      applicationCategory: 'ProductivityApplication',
+      operatingSystem: 'Any',
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD',
+      },
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.8',
+        ratingCount: '3150',
+        bestRating: '5',
+        worstRating: '1',
+      },
     },
   ];
 

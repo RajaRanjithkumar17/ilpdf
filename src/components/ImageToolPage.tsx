@@ -188,6 +188,31 @@ export default function ImageToolPage({
           onDragLeave={() => setDragOver(false)}
           onDrop={handleDrop}
         >
+          {/* Breadcrumb Navigation */}
+          <nav aria-label="Breadcrumb" className="mb-6">
+            <ol className="flex items-center justify-center gap-1.5 text-sm text-gray-500">
+              <li>
+                <a href="/" className="hover:text-gray-900 transition-colors">Home</a>
+              </li>
+              <li aria-hidden="true">
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li>
+                <a href="/image" className="hover:text-gray-900 transition-colors">Image Tools</a>
+              </li>
+              <li aria-hidden="true">
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li>
+                <span className="font-medium text-gray-900">{tool.name}</span>
+              </li>
+            </ol>
+          </nav>
+
           <div className="text-center mb-8">
             <div
               className="inline-flex w-12 h-12 rounded-2xl items-center justify-center text-3xl mb-4"
