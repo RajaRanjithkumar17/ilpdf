@@ -27,9 +27,9 @@ interface PdfToolSeoData {
 
 const PDF_TOOL_SEO: Record<string, PdfToolSeoData> = {
   'merge-pdf': {
-    title: 'Merge PDF Online Free | Combine PDF Files Into One Document',
+    title: 'Merge PDF Online Free | Combine PDF Files Into One',
     description:
-      'Merge PDF files online for free. Combine multiple PDFs into a single document with drag-and-drop reordering. Best free PDF merger — no uploads, no sign-up, 100% private browser processing.',
+      'Merge PDF files online for free. Combine multiple PDFs into one document with drag-and-drop reordering. 100% private — no uploads, no sign-up required.',
     keywords:
       'pdf smart, pdfsmart, smart pdf, merge pdf, combine pdf, merge pdf online free, pdf merger, combine pdf files, join pdf, merge pdf files, pdf combiner, merge pdf online, combine pdf online free, pdf joiner, merge pdf files online free, combine multiple pdfs into one, pdf merge tool, merge pdf documents',
     canonical: `${DOMAIN}/tools/merge-pdf`,
@@ -97,10 +97,9 @@ const PDF_TOOL_SEO: Record<string, PdfToolSeoData> = {
   },
 
   'split-pdf': {
-    title:
-      'Split PDF Online Free | Split PDF Pages Into Separate Files',
+    title: 'Split PDF Online Free | Split PDF Pages Into Separate Files',
     description:
-      'Split PDF online for free. Split PDF pages into separate files, extract specific page ranges, or separate a PDF into individual pages. Free PDF splitter — 100% private, no uploads.',
+      'Split PDF online for free. Extract page ranges or split PDF into individual pages. Free PDF splitter — 100% private, no uploads required.',
     keywords:
       'split pdf, split pdf online, split pdf pages, split pdf free, split pdf pages into separate files, split pdf online free, pdf splitter, separate pdf pages, extract pages from pdf, split pdf into individual pages, pdf page extractor, split pdf file',
     canonical: `${DOMAIN}/tools/split-pdf`,
@@ -169,10 +168,9 @@ const PDF_TOOL_SEO: Record<string, PdfToolSeoData> = {
   },
 
   'compress-pdf': {
-    title:
-      'PDF Compressor Online Free | Compress PDF to 200KB, 100KB, 50KB',
+    title: 'PDF Compressor Free | Compress PDF to 200KB, 100KB, 50KB',
     description:
-      'Free PDF compressor online — compress PDF to 200KB, 100KB, 500KB, or 50KB. Reduce PDF file size by up to 90% with adjustable compression levels. Best free PDF compressor — 100% private, no uploads.',
+      'Free PDF compressor — compress PDF to 200KB, 100KB, 500KB, or 50KB. Reduce file size by up to 90%. Best free PDF compressor — no uploads, 100% private.',
     keywords:
       'pdf compressor, compress pdf, pdf compressor online free, free pdf compressor, compress pdf to 200kb, pdf compressor to 100kb, compress pdf to 500kb, pdf compressor to 50kb, reduce pdf size, compress pdf online, shrink pdf, make pdf smaller, reduce pdf file size free, pdf compression tool, pdf compressor to 200kb',
     canonical: `${DOMAIN}/tools/compress-pdf`,
@@ -253,7 +251,7 @@ const PDF_TOOL_SEO: Record<string, PdfToolSeoData> = {
   'jpg-to-pdf': {
     title: 'JPG to PDF Converter Free | Convert Images to PDF Online',
     description:
-      'Convert JPG, PNG, and WebP images to PDF online for free. Combine multiple images into a single PDF document. Best free image to PDF converter — no uploads, no sign-up, works on any device.',
+      'Convert JPG, PNG, and WebP images to PDF online for free. Combine multiple images into one PDF. No uploads, no sign-up — works on any device.',
     keywords:
       'pdf smart, pdfsmart, smart pdf, jpg to pdf, jpg to pdf converter, convert jpg to pdf, image to pdf, image to pdf converter, photo to pdf, picture to pdf, png to pdf, jpg to pdf online free, convert image to pdf, jpg to pdf converter online free, multiple images to pdf, photo to pdf converter',
     canonical: `${DOMAIN}/tools/jpg-to-pdf`,
@@ -316,9 +314,9 @@ const PDF_TOOL_SEO: Record<string, PdfToolSeoData> = {
   },
 
   'pdf-to-jpg': {
-    title: 'PDF to JPG Converter Free | Convert PDF Pages to Images Online',
+    title: 'PDF to JPG Converter Free | Convert PDF to Images Online',
     description:
-      'Convert PDF to JPG images online for free. Each PDF page becomes a high-quality JPG image, downloaded as a ZIP file. Best free PDF to image converter — no uploads, no sign-up required.',
+      'Convert PDF to JPG images online for free. Each page becomes a high-quality JPG, downloaded as a ZIP. Free PDF to image converter — no uploads, no sign-up.',
     keywords:
       'pdf smart, pdfsmart, smart pdf, pdf to jpg, pdf to jpg converter, convert pdf to jpg, pdf to image, pdf to jpeg, pdf to png, pdf to image converter, convert pdf to image, pdf to jpg online free, extract images from pdf, pdf to jpg converter online free, pdf page to image',
     canonical: `${DOMAIN}/tools/pdf-to-jpg`,
@@ -377,9 +375,9 @@ const PDF_TOOL_SEO: Record<string, PdfToolSeoData> = {
 
   'pdf-to-word': {
     title:
-      'PDF to Word Converter Free | Convert PDF to Editable Word Online',
+      'PDF to Word Converter Free | Convert PDF to Editable DOCX',
     description:
-      'Convert PDF to editable Word (DOCX) online for free. Best free PDF to Word converter — no download, no sign-up. Works offline in your browser. Compatible with Microsoft Word, Google Docs & LibreOffice.',
+      'Convert PDF to editable Word (DOCX) online for free. Best free PDF to Word converter — no download, no sign-up. Works offline in your browser.',
     keywords:
       'pdf smart, pdfsmart, smart pdf, pdf to word converter free offline, convert pdf to editable word, pdf to word converter i love pdf, pdf to word converter adobe, pdf to word converter free download for windows 10, pdf to word converter canva, pdf to word converter app download, pdf to word editable free, pdf to word, convert pdf to word, pdf to docx, pdf to word converter, pdf to editable word, pdf to doc online free',
     canonical: `${DOMAIN}/tools/pdf-to-word`,
@@ -449,9 +447,9 @@ const PDF_TOOL_SEO: Record<string, PdfToolSeoData> = {
 
   'pdf-to-excel': {
     title:
-      'PDF to Excel Converter Free | Convert PDF Tables to XLSX Online',
+      'PDF to Excel Converter Free | Convert PDF Tables to XLSX',
     description:
-      'Convert PDF to Excel (XLSX) online for free. Extract tables and data from PDF documents into editable spreadsheets. Best free PDF to Excel converter — no uploads, no sign-up, works on any device.',
+      'Convert PDF to Excel (XLSX) online for free. Extract tables from PDFs into editable spreadsheets. Free PDF to Excel converter — no uploads, no sign-up.',
     keywords:
       'pdf smart, pdfsmart, smart pdf, pdf to excel, convert pdf to excel, pdf to xlsx, pdf to spreadsheet, extract tables from pdf, pdf to excel converter free, pdf to excel online free, pdf to excel converter online, pdf table to excel, pdf to csv, export pdf to excel',
     canonical: `${DOMAIN}/tools/pdf-to-excel`,
@@ -509,7 +507,7 @@ const PDF_TOOL_SEO: Record<string, PdfToolSeoData> = {
   },
 
   'pdf-to-ppt': {
-    title: 'PDF to PowerPoint Converter Free | Convert PDF to PPTX Online',
+    title: 'PDF to PowerPoint Converter Free | PDF to PPTX Online',
     description:
       'Convert PDF to PowerPoint (PPTX) online for free. Transform PDF slides into editable presentations. Works with Microsoft PowerPoint and Google Slides.',
     keywords:
@@ -631,7 +629,7 @@ const PDF_TOOL_SEO: Record<string, PdfToolSeoData> = {
   'rotate-pdf': {
     title: 'Rotate PDF Online Free | Turn & Flip PDF Pages',
     description:
-      'Rotate PDF pages online for free. Rotate all pages by 90, 180, or 270 degrees. Fix sideways or upside-down PDF documents instantly — 100% private, no uploads.',
+      'Rotate PDF pages online for free. Rotate all pages by 90, 180, or 270 degrees. Fix sideways or upside-down PDFs instantly — no uploads.',
     keywords:
       'pdf smart, pdfsmart, smart pdf, rotate pdf, rotate pdf online, rotate pdf pages, flip pdf, rotate pdf free, rotate pdf permanently, rotate pdf pages online free, turn pdf sideways, rotate pdf 90 degrees, pdf rotator, rotate pdf online free',
     canonical: `${DOMAIN}/tools/rotate-pdf`,
@@ -811,7 +809,7 @@ const PDF_TOOL_SEO: Record<string, PdfToolSeoData> = {
   'reorder-pdf-pages': {
     title: 'Reorder PDF Pages Online Free | Rearrange PDF Page Order',
     description:
-      'Rearrange PDF page order online for free. Define a custom page sequence to reorganize your PDF document. 100% private — no uploads, all processing in your browser.',
+      'Rearrange PDF page order online for free. Define a custom sequence to reorganize your PDF. 100% private — no uploads, runs in your browser.',
     keywords:
       'pdf smart, pdfsmart, smart pdf, reorder pdf pages, rearrange pdf pages, organize pdf pages, reorder pdf online free, rearrange pages in pdf, change pdf page order, reorganize pdf free, reorder pdf, sort pdf pages, pdf page organizer',
     canonical: `${DOMAIN}/tools/reorder-pdf-pages`,
@@ -871,7 +869,7 @@ const PDF_TOOL_SEO: Record<string, PdfToolSeoData> = {
   'protect-pdf': {
     title: 'Protect PDF with Password | Encrypt PDF Online Free',
     description:
-      'Password-protect your PDF files online for free. Add AES-128 encryption to prevent unauthorized access. Secure contracts, financials, and personal documents — 100% private.',
+      'Password-protect PDF files online for free. Add AES-128 encryption to prevent unauthorized access. No uploads — encryption runs in your browser.',
     keywords:
       'pdf smart, pdfsmart, smart pdf, protect pdf, password protect pdf, lock pdf, encrypt pdf, pdf password protection, protect pdf online free, add password to pdf, encrypt pdf online free, pdf encryption tool, secure pdf, lock pdf with password, password protect pdf free',
     canonical: `${DOMAIN}/tools/protect-pdf`,
@@ -931,7 +929,7 @@ const PDF_TOOL_SEO: Record<string, PdfToolSeoData> = {
   'unlock-pdf': {
     title: 'Unlock PDF Online Free | Remove PDF Password Protection',
     description:
-      'Unlock password-protected PDF files online for free. Remove PDF password restrictions to enable editing, printing, and copying. 100% private — runs in your browser.',
+      'Unlock password-protected PDF files online for free. Remove PDF password restrictions for editing and printing. 100% private — no uploads.',
     keywords:
       'pdf smart, pdfsmart, smart pdf, unlock pdf, remove pdf password, unlock pdf online free, pdf password remover, unprotect pdf, remove password from pdf, pdf unlocker, unlock pdf online, remove pdf protection, pdf password remover free, unlock pdf free',
     canonical: `${DOMAIN}/tools/unlock-pdf`,
@@ -991,7 +989,7 @@ const PDF_TOOL_SEO: Record<string, PdfToolSeoData> = {
   'ocr-pdf': {
     title: 'OCR PDF Online Free | Make Scanned PDFs Searchable',
     description:
-      'OCR scanned PDF documents online for free. Convert non-selectable PDFs into searchable, selectable text using Tesseract.js. 100% private — no uploads, runs in your browser.',
+      'OCR scanned PDF documents online for free. Convert non-selectable PDFs into searchable text using Tesseract.js. 100% private — no uploads.',
     keywords:
       'pdf smart, pdfsmart, smart pdf, ocr pdf, pdf ocr, make pdf searchable, ocr pdf online free, scanned pdf to text, text recognition pdf, searchable pdf, ocr pdf free, optical character recognition pdf, pdf ocr online, convert scanned pdf to text, ocr pdf converter',
     canonical: `${DOMAIN}/tools/ocr-pdf`,
@@ -1056,7 +1054,7 @@ const PDF_TOOL_SEO: Record<string, PdfToolSeoData> = {
   'redact-pdf': {
     title: 'Redact PDF Online Free | Permanently Remove Sensitive Info',
     description:
-      'Redact PDF documents online for free. Draw black boxes over sensitive text, images, and graphics to permanently remove information. Ideal for legal and compliance — 100% private.',
+      'Redact PDF documents online for free. Draw black boxes over sensitive text and images to permanently remove information. Ideal for legal docs — no uploads.',
     keywords:
       'pdf smart, pdfsmart, smart pdf, redact pdf, redact pdf online free, black out text in pdf, pdf redaction tool, remove sensitive information pdf, censor pdf, pdf redaction, blackout pdf, redact pdf free, hide text in pdf, pdf redactor online',
     canonical: `${DOMAIN}/tools/redact-pdf`,

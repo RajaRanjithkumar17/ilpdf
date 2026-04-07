@@ -27,10 +27,9 @@ interface ImageToolSeoData {
 
 const IMAGE_TOOL_SEO: Record<string, ImageToolSeoData> = {
   'compress-image': {
-    title:
-      'Compress Image Online Free — Reduce Photo & Picture File Size',
+    title: 'Compress Image Online Free | Reduce Photo File Size',
     description:
-      'Compress images online for free. Reduce JPG, PNG, and WebP file sizes while maintaining quality. Best free image compressor and photo compressor — 100% private, no uploads.',
+      'Compress images online for free. Reduce JPG, PNG, and WebP file sizes while keeping quality. Best free image compressor — no uploads, no sign-up.',
     keywords:
       'compress image, image compressor, photo compressor, reduce image size, compress jpg, compress png, compress photo online, image compression tool, reduce photo file size',
     canonical: `${DOMAIN}/image/compress-image`,
@@ -100,7 +99,7 @@ const IMAGE_TOOL_SEO: Record<string, ImageToolSeoData> = {
   'webp-to-jpg': {
     title: 'WebP to JPG Converter — Convert WebP to JPEG Online Free',
     description:
-      'Convert WebP to JPG online for free. Fast, private WebP to JPG converter that works in your browser. No uploads, no sign-up. Batch convert multiple WebP images to JPG format.',
+      'Convert WebP to JPG online for free. Fast, private converter in your browser. No uploads, no sign-up. Batch convert multiple WebP images to JPG.',
     keywords:
       'webp to jpg, convert webp to jpg, webp to jpeg, webp converter, webp to jpg converter online, change webp to jpg, free webp to jpg',
     canonical: `${DOMAIN}/image/webp-to-jpg`,
@@ -159,10 +158,9 @@ const IMAGE_TOOL_SEO: Record<string, ImageToolSeoData> = {
   },
 
   'heic-to-jpg': {
-    title:
-      'HEIC to JPG Converter — Convert iPhone & iPad Photos to JPG Free',
+    title: 'HEIC to JPG Converter Free | Convert iPhone Photos to JPG',
     description:
-      'Convert HEIC to JPG online for free. Transform iPhone HEIC/HEIF photos to universally compatible JPG format. Private, fast HEIC to JPG converter — no uploads, runs in your browser.',
+      'Convert HEIC to JPG online for free. Transform iPhone HEIC/HEIF photos to JPG format. Fast, private HEIC to JPG converter — no uploads required.',
     keywords:
       'heic to jpg, convert heic to jpg, heic to jpeg, heic converter, iphone photo to jpg, heif to jpg, heic to jpg converter online free',
     canonical: `${DOMAIN}/image/heic-to-jpg`,
@@ -221,10 +219,9 @@ const IMAGE_TOOL_SEO: Record<string, ImageToolSeoData> = {
   },
 
   'resize-image': {
-    title:
-      'Resize Image Online Free — Change Photo Dimensions & Scale Pictures',
+    title: 'Resize Image Online Free | Change Photo Dimensions',
     description:
-      'Resize images online for free. Change image dimensions to any custom size. Perfect for social media, web optimization, and print. Supports JPG, PNG, and WebP — 100% private.',
+      'Resize images online for free. Change image dimensions to any custom size. Perfect for social media and web. Supports JPG, PNG, WebP — no uploads.',
     keywords:
       'resize image, image resizer, resize photo, change image size, resize image online, resize photo online, image size changer, resize jpg, resize png',
     canonical: `${DOMAIN}/image/resize-image`,
@@ -290,7 +287,7 @@ const IMAGE_TOOL_SEO: Record<string, ImageToolSeoData> = {
     title:
       'Crop Image Online Free — Interactive Photo Cropper & Editor',
     description:
-      'Crop images online for free with an interactive editor. Choose from preset aspect ratios (1:1, 4:3, 16:9) or draw a custom crop area. Rule-of-thirds grid overlay for perfect composition.',
+      'Crop images online for free with an interactive editor. Choose preset aspect ratios (1:1, 4:3, 16:9) or draw a custom crop. Rule-of-thirds grid included.',
     keywords:
       'crop image, image cropper, crop photo, crop image online, crop picture, image crop tool, photo cropper, crop jpg, crop png',
     canonical: `${DOMAIN}/image/crop-image`,
@@ -355,7 +352,7 @@ const IMAGE_TOOL_SEO: Record<string, ImageToolSeoData> = {
     title:
       'Convert to JPG Online Free — PNG, WebP, BMP, TIFF to JPEG',
     description:
-      'Convert images to JPG format online for free. Transform PNG, WebP, BMP, and other formats to universally compatible JPG. Adjustable quality — 100% private, no uploads.',
+      'Convert images to JPG online for free. Transform PNG, WebP, BMP to universal JPG format. Adjustable quality — 100% private, no uploads needed.',
     keywords:
       'convert to jpg, png to jpg, image to jpg, convert image to jpg, bmp to jpg, convert png to jpg online, image to jpeg converter',
     canonical: `${DOMAIN}/image/convert-to-jpg`,
@@ -421,7 +418,7 @@ const IMAGE_TOOL_SEO: Record<string, ImageToolSeoData> = {
     title:
       'Convert JPG to PNG or WebP — Free Online JPG Image Converter',
     description:
-      'Convert JPG images to PNG or WebP format online for free. Get transparent backgrounds with PNG or smaller file sizes with WebP. 100% private — no uploads required.',
+      'Convert JPG to PNG or WebP online for free. Get transparent backgrounds with PNG or smaller files with WebP. 100% private — no uploads required.',
     keywords:
       'jpg to png, jpg to webp, convert jpg, jpg converter, jpeg to png, convert jpg to png online, jpg to webp converter',
     canonical: `${DOMAIN}/image/convert-from-jpg`,
@@ -479,10 +476,9 @@ const IMAGE_TOOL_SEO: Record<string, ImageToolSeoData> = {
   },
 
   'upscale-image': {
-    title:
-      'Upscale Image Online Free — AI Image Enhancer & Resolution Booster',
+    title: 'Upscale Image Online Free | AI Image Enhancer',
     description:
-      'Upscale and enhance image resolution online for free. AI-powered upscaling enlarges small or low-resolution images while preserving details. Supports JPG, PNG, and WebP.',
+      'Upscale and enhance image resolution online for free. AI-powered upscaling enlarges low-resolution images while preserving details. No uploads needed.',
     keywords:
       'upscale image, image upscaler, enhance image, increase image resolution, ai upscale, image enhancer, enlarge image, upscale photo',
     canonical: `${DOMAIN}/image/upscale-image`,
@@ -545,10 +541,9 @@ const IMAGE_TOOL_SEO: Record<string, ImageToolSeoData> = {
   },
 
   'watermark-image': {
-    title:
-      'Add Watermark to Image Online Free — Text Watermark & Photo Protection Tool',
+    title: 'Add Watermark to Image Free | Text & Photo Watermark',
     description:
-      'Add text watermarks to images online for free. Customize font, size, color, opacity, and position. Protect your photos and artwork — 100% private, no uploads.',
+      'Add text watermarks to images online for free. Customize font, size, color, opacity, and position. Protect your photos and artwork — no uploads.',
     keywords:
       'watermark image, add watermark, image watermark, photo watermark, watermark tool, add text watermark, watermark photos online',
     canonical: `${DOMAIN}/image/watermark-image`,
@@ -606,10 +601,9 @@ const IMAGE_TOOL_SEO: Record<string, ImageToolSeoData> = {
   },
 
   'rotate-image': {
-    title:
-      'Rotate Image Online Free — Flip & Turn Photos 90, 180, 270 Degrees',
+    title: 'Rotate Image Online Free | Flip Photos 90/180/270 Degrees',
     description:
-      'Rotate images online for free. Rotate photos by 90, 180, or 270 degrees instantly. Fix sideways or upside-down photos without quality loss. Supports JPG, PNG, and WebP.',
+      'Rotate images online for free. Rotate photos by 90, 180, or 270 degrees instantly. Fix sideways photos without quality loss. No uploads needed.',
     keywords:
       'rotate image, rotate photo, image rotator, rotate image online, rotate picture, rotate jpg, flip image, rotate photo 90 degrees',
     canonical: `${DOMAIN}/image/rotate-image`,
@@ -667,10 +661,9 @@ const IMAGE_TOOL_SEO: Record<string, ImageToolSeoData> = {
   },
 
   'blur-face': {
-    title:
-      'Blur Faces in Photos Online Free — AI Privacy Face Blur & Anonymizer Tool',
+    title: 'Blur Faces in Photos Free | AI Privacy Face Blur Tool',
     description:
-      'Automatically detect and blur faces in photos online for free. AI-powered face detection with adjustable blur intensity. Protect privacy in images — 100% client-side.',
+      'Blur faces in photos online for free. AI-powered face detection with adjustable blur intensity. Protect privacy in images — 100% client-side, no uploads.',
     keywords:
       'blur face, face blur, blur face in photo, blur faces online, face blur tool, anonymize photo, blur face privacy, face detection blur',
     canonical: `${DOMAIN}/image/blur-face`,
@@ -733,10 +726,9 @@ const IMAGE_TOOL_SEO: Record<string, ImageToolSeoData> = {
   },
 
   'remove-bg': {
-    title:
-      'Remove Background from Image — Free AI Background Remover & Eraser',
+    title: 'Remove Image Background Free | AI Background Remover',
     description:
-      'Remove image backgrounds automatically in 5 seconds with just one click. Do not spend hours manually picking pixels. Upload your photo now',
+      'Remove image backgrounds automatically in seconds. AI-powered background remover. Download PNG with transparent background — free, no uploads.',
     keywords:
       'remove bg, background remover, bg remove, remove background, bg remover, remove image background, background eraser, delete background from photo',
     canonical: `${DOMAIN}/image/remove-bg`,
