@@ -19,7 +19,7 @@ interface DragState {
 }
 
 const TOOL_COLOR = '#7c3aed';
-const MAX_DURATION_S = 60;
+const MAX_FILE_MB = 500;
 
 function getMimeType(): string {
   const candidates = [
@@ -179,7 +179,7 @@ export default function RemoveOverlayClient() {
       setError('Please upload a video file (MP4, MOV, WebM).');
       return;
     }
-    if (f.size > 500 * 1024 * 1024) {
+    if (f.size > MAX_FILE_MB * 1024 * 1024) {
       setError('File is too large. Maximum 500 MB.');
       return;
     }
@@ -203,18 +203,19 @@ export default function RemoveOverlayClient() {
   const handleVideoMeta = useCallback(() => {
     const v = videoRef.current;
     if (!v) return;
-    if (v.duration > MAX_DURATION_S) {
-      setError(
-        `Video is ${Math.round(v.duration)}s — maximum is ${MAX_DURATION_S}s. Please trim it first.`
-      );
-      handleReset();
-      return;
-    }
     const vw = v.videoWidth || 1920;
     const vh = v.videoHeight || 1080;
     setVideoDims({ w: vw, h: vh });
     // Default mask: top-right corner watermark
     setMask({ x: vw - 180, y: 20, w: 160, h: 60 });
+    // Show estimated processing time (real-time = same duration as video)
+    if (v.duration > 60) {
+      const mins = Math.floor(v.duration / 60);
+      const secs = Math.round(v.duration % 60);
+      setError(
+        `ℹ️ This video is ${mins}m ${secs}s — processing will take roughly the same time. Keep this tab active.`
+      );
+    }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ─── Reset ───────────────────────────────────────────────────────────────────
@@ -267,9 +268,13 @@ export default function RemoveOverlayClient() {
         videoStream.getAudioTracks().forEach((t: MediaStreamTrack) => tracks.push(t));
       }
 
+      // Match source bitrate so output size ≈ input size
+      const sourceBitrate = Math.round((file.size * 8) / v.duration);
+      const videoBitrate = Math.max(300_000, Math.min(sourceBitrate, 12_000_000));
+
       const recorder = new MediaRecorder(new MediaStream(tracks), {
         mimeType,
-        videoBitsPerSecond: 6_000_000,
+        videoBitsPerSecond: videoBitrate,
       });
 
       const chunks: Blob[] = [];
@@ -503,11 +508,19 @@ export default function RemoveOverlayClient() {
               >
                 Choose Video
               </button>
-              <p className="text-xs text-gray-400 mt-5">MP4, MOV, WebM · Max 60 seconds · Max 500 MB</p>
+              <p className="text-xs text-gray-400 mt-5">MP4, MOV, WebM · Max 500 MB · Processing time = video duration</p>
             </div>
 
             {error && (
-              <p className="mt-6 text-red-600 font-medium">{error}</p>
+              <p
+                className={`mt-6 font-medium ${
+                  error.startsWith('ℹ️')
+                    ? 'text-blue-600'
+                    : 'text-red-600'
+                }`}
+              >
+                {error}
+              </p>
             )}
 
             {/* Feature Pills */}
