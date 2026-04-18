@@ -85,6 +85,7 @@ const imageCategories = [
       { name: 'Upscale Image', href: '/image/upscale-image' },
       { name: 'Image Watermark', href: '/image/watermark-image' },
       { name: 'Blur Face', href: '/image/blur-face' },
+      { name: 'Video Watermark Remover', href: '/image/video-watermark-remover' },
     ],
   },
 ];

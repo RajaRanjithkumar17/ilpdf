@@ -194,6 +194,18 @@ export const imageTools: Tool[] = [
     ],
   },
   {
+    id: 'video-watermark-remover',
+    name: 'Video Watermark Remover',
+    description: 'Remove watermarks and static overlays from videos — frame by frame, in your browser',
+    href: '/image/video-watermark-remover',
+    color: '#7c3aed',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10l4.553-2.069A1 1 0 0121 8.82V15a1 1 0 01-1.447.894L15 14M3 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/><line x1="1" y1="1" x2="23" y2="23"/></svg>',
+    iconClass: 'icon-video-watermark',
+    acceptTypes: 'video/mp4,video/quicktime,video/webm',
+    multiple: false,
+    category: 'image',
+  },
+  {
     id: 'blur-face',
     name: 'Blur Face',
     description: 'Automatically detect and blur faces in photos for privacy',
